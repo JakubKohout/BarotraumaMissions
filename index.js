@@ -20,6 +20,9 @@ const parseEventSets = (root) => {
         if (eventSet.$.chooserandom === 'true' && eventSet.MonsterEvent != null) {
             eventSet.MonsterEvent = shuffle(eventSet.MonsterEvent);
         }
+        if (eventSet.$.chooserandom === 'true' && eventSet.EventSet != null) {
+            eventSet.EventSet = shuffle(eventSet.EventSet);
+        }
         parseEventSets(eventSet);
     });
 };
